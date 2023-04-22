@@ -147,7 +147,7 @@ def get_route(hostname):
                         {'Hop Count': [ttl], 'Try': [tries], 'IP': [addr[0]], 'Hostname': [gethostbyaddr(addr[0])[0]],
                          'Response Code': ["echo reply"]})], ignore_index=True
                     #Fill in end
-                        return df
+                        
                 else:
                     #Fill in start
                     #If there is an exception/error to your if statements, you should append that to your df here
