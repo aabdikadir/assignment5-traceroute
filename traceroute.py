@@ -145,7 +145,7 @@ def get_route(hostname):
                    
                     df = pd.concat([df, pd.DataFrame(
                         {'Hop Count': [ttl], 'Try': [tries], 'IP': [addr[0]], 'Hostname': [gethostbyaddr(addr[0])[0]],
-                         'Response Code': ["echo reply"]})], ignore_index=True
+                         'Response Code': ["echo reply"]})], ignore_index=True)
                     #Fill in end
                         
                 else:
