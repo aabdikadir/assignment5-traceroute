@@ -90,9 +90,8 @@ def get_route(hostname):
                     #Fill in start
                     #append response to your dataframe including hop #, try #, and "timeout" responses as required by the acceptance criteria
                     #print (df)
-                    df = df.append({'Hop Count': ttl, 'Try': 1, 'IP': '', 'Hostname': '', 'Response Code': 'timeout'}, ignore_index=True)
-                    mySocket.close()
-                    continue
+                    df = df.append({'Hop Count': ttl, 'Try': tries+1, 'IP': '', 'Hostname': '', 'Response Code': 'timeout'}, ignore_index=True)
+                    break
                     #Fill in end
                 recvPacket, addr = mySocket.recvfrom(1024)
                 timeReceived = time.time()
